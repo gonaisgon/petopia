@@ -10,8 +10,8 @@
 	<!-- ==== #15. myBatis(JDBC)설정 연결문자열 설정하기  ==== -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
-		<property name="url" value="jdbc:oracle:thin:@192.168.50.34:1521:xe" />
-		<property name="username" value="myorauser" />
+		<property name="url" value="jdbc:oracle:thin:@26.37.103.163:1521:xe" />
+		<property name="username" value="final2" />
 		<property name="password" value="eclass" />
 	</bean>
 	

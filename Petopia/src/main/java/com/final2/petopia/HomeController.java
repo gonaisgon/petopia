@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController {
 	
-	@RequestMapping(value = "/home.pet", method = {RequestMethod.GET})
+	@RequestMapping(value = "/test.pet", method = {RequestMethod.GET})
 	public String home() {
 		System.out.println("????");
 		

@@ -13,4 +13,12 @@ public class CommonController {
 		
 		return "main/index.tiles2";
 	}
+	
+	@RequestMapping(value="/home.pet", method= {RequestMethod.GET})
+	public String home(HttpServletRequest req) {
+		
+		return "home/index.tiles1";
+	}
+	
+	
 }

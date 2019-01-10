@@ -17,70 +17,35 @@
 	String serverName = "http://"+serverIP+":"+portnumber;
 %>
 
-<div align="center">
-	<ul class="nav nav-tabs mynav">
-		<li class="dropdown"><a class="dropdown-toggle"
-			data-toggle="dropdown" href="#">Home <span class="caret"></span></a>
-			<ul class="dropdown-menu">
-				<li><a href="<%=cxtPath%>/index.action">Home</a></li>
-			<%-- 	<li><a href="<%=serverName%><%=cxtPath%>/chatting/multichat.action">웹채팅</a></li>  --%> 
-				<li><a href="#">Submenu 1-3</a></li>
-			</ul></li>
-	<li class="dropdown"><a class="dropdown-toggle"
-			data-toggle="dropdown" href="#">게시판 <span class="caret"></span></a>
-			<ul class="dropdown-menu">
-				<li><a href="<%=cxtPath%>/list.action">목록보기</a></li>
-				<li><a href="<%=cxtPath%>/add.action">글쓰기</a></li>
-				<li><a href="#">Submenu 2-3</a></li>
-			</ul></li>
-		<li class="dropdown"><a class="dropdown-toggle"
-			data-toggle="dropdown" href="#">주문(통계차트) <span class="caret"></span></a>
-			<ul class="dropdown-menu">
-				<li><a href="<%=cxtPath%>/chart/order.action">주문하기</a></li>
-				<li><a href="<%=cxtPath%>/chart/myorderchart.action">나의주문내역차트</a></li>
-				<li><a href="#">Submenu 3-3</a></li>
-			</ul></li>	
-		
-		<li class="dropdown"><a class="dropdown-toggle"
-			data-toggle="dropdown" href="#">제품정보 <span class="caret"></span></a>
-			<ul class="dropdown-menu">
-				<li><a href="<%=cxtPath%>/product/listProduct.action">제품목록</a></li>
-			</ul></li>
-		
-		<c:if test="${sessionScope.loginuser.gradelevel >= 10 }">
-		<li class="dropdown"><a class="dropdown-toggle"
-			data-toggle="dropdown" href="#">제품등록(다중파일첨부) <span class="caret"></span></a>
-			<ul class="dropdown-menu">
-			    <li><a href="<%=cxtPath%>/product/addProduct.action">제품등록</a></li>
-				<li><a href="<%=cxtPath%>/product/productStore.action">제품입고</a></li>
-			</ul></li>
-		</c:if>	
-		
-		<li class="dropdown"><a class="dropdown-toggle"
-			data-toggle="dropdown" href="#">로그인 <span class="caret"></span></a>
-			<ul class="dropdown-menu">
-				<c:if test="${sessionScope.loginuser == null}">
-				<li><a href="#">회원가입</a></li>
-				<li><a href="<%=cxtPath%>/login.action">로그인</a></li>
-				</c:if>
-				
-				<c:if test="${sessionScope.loginuser != null}">
-				<li><a href="<%=cxtPath%>/myinfo.action">나의정보</a></li>
-				<li><a href="<%=cxtPath%>/logout.action">로그아웃</a></li>
-				</c:if>
-			</ul></li>		
-		
-		<!-- ===== #49. 로그인 성공한 사용자 이메일 출력하기. ===== -->
-		<c:if test="${sessionScope.loginuser.gradelevel < 10 }">
-		<li style="margin-left: 25%; margin-top: 1%;">
-		  <span style="color: navy; font-weight: bold;">${sessionScope.loginuser.email}</span> 님
-		</li>
-		</c:if>
-		
-		<c:if test="${sessionScope.loginuser.gradelevel >= 10 }">
-		<li style="margin-left: 5%; margin-top: 1%;">
-		  <span style="color: red; font-weight: bold;">${sessionScope.loginuser.email}</span> 님
-		</li>
-		</c:if>		
-	</ul>
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+	    $('[data-toggle="popover"]').popover();
+	    
+	});
+
+	
+</script>
+
+
+
+
+<div class="jumbotron jumbotron-fluid" style="width: 100%; height: 320px; border-radius: 10px; background-color: transparent; background-image: url('<%= cxtPath %>/resources/img/homeheader/homeheader2_morecrop.jpg'); background-size: cover;">
+	<div class="container" align="right">
+		<div class="buttons" >
+	 	  	<button type="button" class="btn" style="background-color: #ff6e60; color:white;">회원가입</button>
+	 	  	<button type="button" class="btn" style="background-color: gray; color:white;" onclick="javascript:location.href='<%= cxtPath %>/login.pet'">로그인</button>
+	 	  	<button type="button" class="btn btn-warning" onclick="javascript:location.href='<%= cxtPath %>/logout.pet'">로그아웃</button>
+	 	  	<a href="#" data-toggle="popover" title="이고은님 환영합니다" data-content="<a href='<%= cxtPath %>/diary.pet?idx=${ loginuser.idx }'>반려동물수첩</a><br/><a href='<%= cxtPath%>/info.pet'>나의정보보기</a><br/><a href='<%= cxtPath%>/myreview.pet?idx=${ loginuser.idx}'>나의병원리뷰</a><br/><a href='<%= cxtPath%>/myhospital.pet?idx=${ loginuser.idx}'>나의병원관리</a>" data-html="true" data-placement="auto" style="border: 0px;"><img src="<%= cxtPath%>/resources/img/homeheader/user.png" style="width:30px; height: 30px;"/></a>
+ 	  	</div>
+ 	  	<div class="h1_companyname">
+ 	  		<h1 style="font-weight: bold;"><span style="color: #3b5998">PET</span><span style="color: orange;">O</span><span style="color: rgb(252, 118, 106)">PIA</span></h1>
+ 	  	</div>
+ 	  	<div class="search">
+			<form name="searchFrm">
+			  <input type="text" id="searchWord" name="searchWord" placeholder="이름/위치 검색" >
+			</form>
+ 	  	</div>
+   	</div>
 </div>

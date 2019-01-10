@@ -11,6 +11,7 @@
 	<!-- ==== tiles 를 사용하는 레이아웃 설정 시작 ==== -->
 	<definition name="layout-tiles1" template="/WEB-INF/tiles/layout/layout-tiles1.jsp"> 
 		<put-attribute name="header" value="/WEB-INF/tiles/tile1/header.jsp" />
+		<put-attribute name="header2" value="/WEB-INF/tiles/tile1/header2.jsp" />
 		<put-attribute name="content" value="" />
 		<put-attribute name="footer" value="/WEB-INF/tiles/tile1/footer.jsp" />
 	</definition>

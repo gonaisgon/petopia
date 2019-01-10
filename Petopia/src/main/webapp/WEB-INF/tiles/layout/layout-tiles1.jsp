@@ -12,21 +12,88 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>나의 게시판 홈페이지</title>
+<title>PETOPIA(펫토피아)</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
-  <link rel="stylesheet" type="text/css" href="<%=ctxPath %>/resources/css/style1.css" />
 
+<style type="text/css">
+
+	.jumbotron {
+    	background-color: rgb(252,118,106);
+    	color: #ffffff;
+  	}
+	
+	.navbar {
+	  margin-bottom: 0;
+	  background-color: rgb(252, 118, 106);
+	  z-index: 9999;
+	  border: 0;
+	  font-size: 12px !important;
+	  line-height: 1.42857143 !important;
+	  letter-spacing: 4px;
+	  border-radius: 0;
+	}
+	
+	.navbar li a, .navbar .navbar-brand {
+	  color: white !important;
+	}
+	
+	.navbar-nav li a:hover, .navbar-nav li.active a {
+	  font-weight: bold;
+	}
+	
+	.navbar-default .navbar-toggle {
+	  border-color: transparent;
+	  color: #fff !important;
+	}
+	    
+	.navbar-default .navbar-nav .dropdown .dropdown-toggle:focus,
+    .navbar-default .navbar-nav .dropdown .dropdown-toggle:hover
+     {
+        color: #fff;
+        background-color: rgb(252, 118, 106);
+     }
+	
+	
+	h2 {
+	  font-size: 24px;
+	  text-transform: uppercase;
+	  color: #303030;
+	  font-weight: 600;
+	  margin-bottom: 30px;
+	}
+	
+	h4 {
+	  font-size: 19px;
+	  line-height: 1.375em;
+	  color: #303030;
+	  font-weight: 400;
+	  margin-bottom: 30px;
+	}
+	
+	
+	 /*-- change navbar dropdown color --*/
+  	.navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
+    	background-color: #fff !important;
+    	color: rgb(252, 118, 106) !important;
+  	}
+  	
+  	.search {
+  	 	width: auto; margin-top: 3%;
+  	}
+  	
+  	
+</style>
+  
 </head>
 
 <body>
 	<div id="mycontainer">
 		<div id="myheader">
-			<tiles:insertAttribute name="header" />
+			<tiles:insertAttribute name="header2" />
 		</div>
 	
 		<div id="mycontent">
