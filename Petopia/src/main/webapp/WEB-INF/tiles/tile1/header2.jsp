@@ -6,36 +6,11 @@
 %>
     
 <script type="text/javascript">
-
-	$(document).ready(function(){
-		
-		$(".search_submit").click(function(){
-			
-			goSearchbyword();
-			
-		});
-		
-		
-		$(".search").keydown(function(){
-			
-			if(event.KeyCode == 13) {
-				goSearchbyword();
-			}
-			
-		});
-		
-	});
-	
-	function goSearchbyword() {
-
-		
-		
-	};
 	
 
 </script>
 
-
+<div class="header">
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -44,7 +19,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> 
       </button>
-      <a class="navbar-brand" href="<%= cxtPath %>/home.pet">PETOPIA</a>
+      <a class="navbar-brand logo" href="<%= cxtPath %>/home.pet">PETOPIA</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -65,22 +40,8 @@
     </div>
   </div>
 </nav>
-
-
-<div class="jumbotron text-center">
-	<h1>PETOPIA</h1> 
-	<p>동물병원/약국 검색·예약·결제, 나의 반려동물 관리까지 한번에</p>
-	<form class="form-inline justify-content-center">
-		<div class="input-group search">
-		    <input id="inputlg" type="text" class="form-control input-lg" placeholder="이름/지역 검색">
-		    <div class="input-group-btn">
-		      <button id="inputlg" class="btn btn-default input-lg search_submit" type="submit">
-		        <i class="glyphicon glyphicon-search"></i>
-		      </button>
-		    </div>
-		</div>
-	</form>
 </div>
+
 
 
 </body>

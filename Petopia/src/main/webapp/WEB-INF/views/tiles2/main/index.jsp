@@ -8,13 +8,10 @@
 %>
 
 <div class="container">
-<div class="row">
-  <div class="side">
-    <h2>사이드바</h2>
-  </div>
-  <div class="main">
+
+  <div class="main" style="border: 1px solid gray;">
     <h2>Container 영역</h2>
   </div>
-</div>    
+
 </div>
     

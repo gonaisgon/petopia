@@ -14,10 +14,10 @@
 <meta charset="UTF-8">
 <title>PETOPIA(펫토피아)</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <style type="text/css">
 
@@ -35,6 +35,12 @@
 	  line-height: 1.42857143 !important;
 	  letter-spacing: 4px;
 	  border-radius: 0;
+	}
+	
+	.header a.logo {
+	  font-size: 18px;
+	  font-weight: bold;
+	  margin-left: 2.5%;
 	}
 	
 	.navbar li a, .navbar .navbar-brand {
@@ -57,11 +63,17 @@
         background-color: rgb(252, 118, 106);
      }
 	
-	
+	 /*-- change navbar dropdown color --*/
+  	.navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
+    	background-color: #fff !important;
+    	color: rgb(252, 118, 106) !important;
+  	}
+  	
+  	
 	h2 {
 	  font-size: 24px;
 	  text-transform: uppercase;
-	  color: #303030;
+	  /* color: #303030; */
 	  font-weight: 600;
 	  margin-bottom: 30px;
 	}
@@ -74,20 +86,11 @@
 	  margin-bottom: 30px;
 	}
 	
-	
-	 /*-- change navbar dropdown color --*/
-  	.navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
-    	background-color: #fff !important;
-    	color: rgb(252, 118, 106) !important;
-  	}
   	
-  	.search {
-  	 	width: auto; margin-top: 3%;
-  	}
   	
   	
 </style>
-  
+
 </head>
 
 <body>

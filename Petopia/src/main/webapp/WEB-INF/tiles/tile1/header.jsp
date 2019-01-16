@@ -33,7 +33,7 @@
 
 <div class="jumbotron jumbotron-fluid" style="width: 100%; height: 320px; border-radius: 10px; background-color: transparent; background-image: url('<%= cxtPath %>/resources/img/homeheader/homeheader2_morecrop.jpg'); background-size: cover;">
 	<div class="container" align="right">
-		<div class="buttons" >
+		<div class="buttons">
 	 	  	<button type="button" class="btn" style="background-color: #ff6e60; color:white;">회원가입</button>
 	 	  	<button type="button" class="btn" style="background-color: gray; color:white;" onclick="javascript:location.href='<%= cxtPath %>/login.pet'">로그인</button>
 	 	  	<button type="button" class="btn btn-warning" onclick="javascript:location.href='<%= cxtPath %>/logout.pet'">로그아웃</button>
